@@ -26,7 +26,7 @@ ifneq (,$(UNSHARE))
 UNSHARE := $(UNSHARE) --uts
 endif
 
-all: clean install image
+all: clean image
 
 langs:
 	@for lang in pwnagotchi/locale/*/; do\
@@ -74,5 +74,3 @@ clean:
 	- rm -f $(PACKER)
 	- rm -f $(PWN_RELEASE).*
 	- sudo rm -rf builder/output-pwnagotchi builder/packer_cache
-
-
